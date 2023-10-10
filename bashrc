@@ -103,7 +103,7 @@ cd /mnt/blockstorage/sh/
 #End
 ##############
 
-alias cbaliyunpan="aliyunpan ll -name --asc"
+#alias cbaliyunpan="aliyunpan ll -name --asc"
 
 
 # Source global definitions
