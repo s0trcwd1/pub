@@ -98,7 +98,7 @@ alias yyttpt='yt-dlp -o "%(playlist)s.%(title)s.%(ext)s"'
 alias llll="ls -l | awk '{print $9}'"
 export PATH="$PATH:/opt/bin"
 
-cd /mnt/blockstorage/sh/
+#cd /mnt/blockstorage/sh/
 #cd /n/
 #End
 ##############
@@ -111,6 +111,6 @@ if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
 
-. "/root/.acme.sh/acme.sh.env"
+#. "/root/.acme.sh/acme.sh.env"
 
 #screen -wipe
