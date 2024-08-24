@@ -13,4 +13,4 @@
 
 	wget "https://raw.githubusercontent.com/s0trcwd1/pub/main/authorized_keys.txt"
 
-	wget "https://raw.githubusercontent.com/s0trcwd1/pub/main/authorized_keys.txt"
+
