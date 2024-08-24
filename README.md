@@ -8,3 +8,7 @@
  	mv /root/bashrc /root/.bashrc
 
 	wget -P /etc/ https://raw.githubusercontent.com/s0trcwd1/pub/main/screenrc
+
+###
+
+	https://raw.githubusercontent.com/s0trcwd1/pub/main/authorized_keys.txt
