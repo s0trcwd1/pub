@@ -23,3 +23,18 @@
  	mv authorized_keys authorized_keys.bak.bak
 
 	wget "https://raw.githubusercontent.com/s0trcwd1/pub/main/authorized_keys"
+##rclone sftp
+
+[sjc]
+
+type = sftp
+
+host = xxx
+
+port = xxx
+
+user = root
+
+key_file = ~/.ssh/id_rsa
+
+shell_type = unix
