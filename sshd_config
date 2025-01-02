@@ -1,0 +1,14 @@
+Port 22
+Include /etc/ssh/sshd_config.d/*.conf
+ClientAliveInterval 30
+ClientAliveCountMax 60
+PermitRootLogin yes
+PubkeyAuthentication yes
+AuthorizedKeysFile     .ssh/authorized_keys
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+UsePAM yes
+X11Forwarding yes
+PrintMotd no
+UseDNS no
+Subsystem       sftp    /usr/lib/openssh/sftp-server
