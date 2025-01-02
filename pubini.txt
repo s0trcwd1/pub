@@ -1,0 +1,380 @@
+cd /usr/share/zoneinfo/posix && find * -type f -or -type l | sort
+
+修改时区:
+
+timedatectl set-timezone Asia/Shanghai
+
+reboot
+
+sudo -i
+mkdir -p /mnt/blockstorage/data/pikpak
+mkdir -p /mnt/blockstorage/sh/
+mkdir -p /etc/iptables/
+mkdir -p /root/.vim
+touch /root/.vim/vimrc
+mkdir -p /data/p1new
+mkdir -p /data/wgcf
+mkdir -p /data/ny/
+mkdir -p /data/ly/
+mkdir -p /data/temp
+mkdir -p /data/alist
+mkdir -p /root/.config/rclone/
+mkdir -p /root/.ssh/
+mkdir -p /root/.config/rclone/
+mkdir -p /var/log/rclone/
+mkdir -p /mnt/blockstorage/complete
+mkdir -p /mnt/blockstorage/incomplete/
+mkdir -p /mnt/blockstorage/data/1
+mkdir -p /mnt/blockstorage/data/2
+mkdir -p /mnt/blockstorage/data/3
+mkdir -p /mnt/blockstorage/data/4
+mkdir -p /mnt/blockstorage/data/5
+mkdir -p /mnt/blockstorage/data/6
+mkdir -p /mnt/blockstorage/data/7
+mkdir -p /mnt/blockstorage/data/8
+mkdir -p /mnt/blockstorage/data/9
+mkdir -p /mnt/blockstorage/cert/
+mkdir -p /mnt/blockstorage/data/save
+mkdir -p /mnt/blockstorage/sh/
+mkdir -p /mnt/blockstorage/log/
+mkdir -p /mnt/blockstorage/md5/
+mkdir -p /mnt/blockstorage/data/201
+mkdir -p /mnt/blockstorage/data/202
+mkdir -p /mnt/blockstorage/data/203
+mkdir -p /mnt/blockstorage/data/204
+mkdir -p /mnt/blockstorage/data/205
+mkdir -p /mnt/blockstorage/data/206
+mkdir -p /mnt/blockstorage/data/207
+mkdir -p /mnt/blockstorage/data/208
+mkdir -p /mnt/blockstorage/data/209
+mkdir -p /mnt/blockstorage/data/210
+mkdir -p /mnt/blockstorage/data/pikpak/
+mkdir -p /data/v2/
+mkdir -p /data/v1
+mkdir -p /mnt/blockstorage/md5/
+mkdir -p /mnt/blockstorage/log/
+mkdir -p /mnt/blockstorage/sh
+ln -s /mnt/blockstorage/data/ /n
+mv -f /etc/resolv.conf /etc/resolv.conf.bak
+echo -e "nameserver 2a01:4f8:c2c:123f::1\nnameserver 2a00:1098:2c::1\nnameserver 2a01:4f9:c010:3f02::1" > /etc/resolv.conf
+
+
+echo -e "nameserver 8.8.8.8\nnameserver 8.8.4.4" > /etc/resolv.conf
+echo -e "nameserver  2001:4860:4860::8888\nnameserver 2001:4860:4860::8844" > /etc/resolv.conf
+echo -e "nameserver 8.8.8.8\nnameserver 8.8.4.4\nnameserver 2a01:4f8:c2c:123f::1\nnameserver 2a00:1098:2c::1\nnameserver 2a01:4f9:c010:3f02::1" > /etc/resolv.
+
+
+sshd
+##########################################################################################################################################
+
+mkdir -p /data/temp/
+ 
+mkdir -p ~/.ssh/
+
+cd ~/.ssh/
+
+mv authorized_keys authorized_keys.bak.bak
+
+wget "https://raw.githubusercontent.com/s0trcwd1/pub/main/authorized_keys"
+
+cd /etc/ssh/
+
+mv -f sshd_config sshd_config.bak.bak
+
+wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/sshd_config"
+
+
+###ssh port:###
+
+systemctl restart ssh
+
+
+systemctl restart sshd
+
+
+
+
+
+ubuntu:
+cat >/etc/ssh/sshd_config <<EOF
+Include /etc/ssh/sshd_config.d/*.conf
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+UsePAM yes
+X11Forwarding yes
+PrintMotd no
+AcceptEnv LANG LC_*
+Subsystem       sftp    /usr/lib/openssh/sftp-server
+PermitRootLogin yes
+EOF
+cp -r /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
+
+##########################################################################################################################################
+
+
+mv -f /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
+cat >/etc/ssh/sshd_config <<EOF
+Include /etc/ssh/sshd_config.d/*.conf
+ClientAliveInterval 30
+ClientAliveCountMax 60
+PermitRootLogin yes
+PubkeyAuthentication yes
+AuthorizedKeysFile     .ssh/authorized_keys
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+UsePAM yes
+X11Forwarding yes
+PrintMotd no
+UseDNS no
+Subsystem       sftp    /usr/lib/openssh/sftp-server
+EOF
+systemctl restart sshd
+
+语言:
+##########################################################################################################################################
+apt-get update -y
+
+apt-get upgrade -y
+
+apt-get install dnsutils telnet screen locales wget mount unzip tree tcpdump curl fuse3 screen nano net-tools vim gnutls-bin sshpass curl -y
+
+
+cd /data/temp
+
+mv /root/.bashrc /root/.bashrc.bak
+
+mv /etc/screenrc /etc/screenrc.bak
+
+wget -P /root/ https://raw.githubusercontent.com/s0trcwd1/pub/main/bashrc
+
+mv /root/bashrc /root/.bashrc
+
+wget -P /etc/ https://raw.githubusercontent.com/s0trcwd1/pub/main/screenrc
+  
+  
+  
+    
+dpkg-reconfigure locales
+
+en_US.UTF-8 zh_CN.UTF-8,2312,gbk.选en_US.UTF-8
+
+exit
+
+##########################################################################################################################################
+openvpn client
+debian11:
+
+cd /data/temp
+
+apt-get install openvpn -y
+
+cd /etc/openvpn/client/
+
+syy100.conf
+
+systemctl enable openvpn-client@syy100
+
+systemctl start openvpn-client@syy100
+
+
+
+apt 
+##########################################################################################################################################
+screen
+cd /data/temp
+
+
+
+screen -ls
+screen -D -r
+
+systemctl stop apache2
+systemctl disable apache2
+
+
+systemctl start apache2
+https://gitlab.com/rwkgyg/CFwarp
+
+exit
+  
+nat
+screen
+cd /data/temp/
+
+
+
+mknod -m 666 /dev/fuse c 10 229
+
+cd /root
+wget https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh 
+chmod +x CFwarp.sh
+bash CFwarp.sh
+
+apt install git
+cd /data/temp/
+wget https://www.rarlab.com/rar/rarlinux-x64-5.6.0.tar.gz
+tar -xvf rarlinux-x64-5.6.0.tar.gz
+cd rar
+make
+make install
+cd ../
+
+http://193.54.225.219/pool/non-free/r/rar/
+
+dpkg -i path_to_deb_file
+
+wget http://193.54.225.219/pool/non-free/r/rar/rar_6.23-1_amd64.deb
+dpkg -i rar_6.23-1_amd64.deb
+
+cd /data/temp/
+apt-get install python3  ffmpeg  -y
+
+
+##########################################################################################################################################
+cat /dev/net/tun
+: File descriptor in bad state
+mknod -m 666 /dev/fuse c 10 229
+update-rc.d -f udev disable
+
+cd /data/temp/
+
+方法1:
+wget https://rclone.org/install.sh
+bash install.sh
+
+方法2:
+apt install rclone
+
+方法3:
+  
+wget https://downloads.rclone.org/v1.61.0/rclone-v1.61.0-linux-amd64.zip
+unzip rclone-v1.61.0-linux-amd64.zip
+cp -r rclone-v1.61.0-linux-amd64/rclone /usr/bin/
+chmod +x /usr/bin/rclone 
+
+##########################################################################################################################################
+
+
+
+#############
+cd /etc/systemd/
+cp -rf journald.conf journald.conf.bak
+cat >/etc/systemd/journald.conf << EOF
+[Journal]
+SystemMaxUse=50M
+EOF
+du -sh /var/log/journal/
+ 
+systemctl restart systemd-journald.service
+apt clean all
+
+cd /data/temp/
+
+
+
+cd /data/temp/
+
+
+
+
+find / -type f -name +250M -a -size -99200M -exec md5sum {} \;
+
+##########################################################################################################################################
+curl  https://get.acme.sh >acme.sh
+
+sh acme.sh
+
+source ~/.bashrc
+apt install socat
+cd /root/.acme.sh/
+acme.sh --set-default-ca --server letsencrypt
+acme.sh --issue -d haxa.ixixx.ru,haxacf.ixixx.ru --standalone --listen-v6
+.acme.sh# acme.sh --issue -d nata.ixixx.ru,natacf.ixixx.ru --standalone --listen-v6
+acme.sh --issue --dns dns_cf -d 1.ixixx.ru,2.ixixx.ru,3.ixixx.ru,4.ixixx.ru,5.ixixx.ru,haxa.ixixx.ru,haxb.ixixx.ru,haxc.ixixx.ru,vc1.ixixx.ru,vc2.ixixx.ru,haxacf.ixixx.ru,haxbcf.ixixx.ru,haxccf.ixixx.ru,vc1cf.ixixx.ru,vc2cf.ixixx.ru,natacf.ixixx.ru,natbcf.ixixx.ru,natccf.ixixx.ru,nata.ixixx.ru,natb.ixixx.ru,natc.ixixx.ru
+cp -r  /root/.acme.sh/haxa.ixixx.ru_ecc/ /mnt/blockstorage/cert/
+
+###
+https://blog.exsvc.cn/article/acme-sh-ssl-install.html
+https://wzfou.com/acmesh-ssl/
+
+##########################################################################################################################################
+nginx:
+cd /data/temp
+
+apt install nginx -y
+
+cd /etc/nginx/
+
+cp nginx.conf nginx.conf.bak
+
+mkdir -p /mnt/blockstorage/cert/
+
+vi /mnt/blockstorage/cert/nginx.crt
+
+vi /mnt/blockstorage/cert/nginx.key
+
+
+
+
+rm -rf /data/temp/nginx.local
+
+rm -rf /data/temp/nginx.nata.rar
+
+rm -rf /data/temp/etc/
+
+cp -r /etc/nginx/ /data/temp/nginx.local
+
+
+
+cp -r /data/alist/natc/nginx.nata.rar /data/temp/
+
+rar x /data/temp/nginx.nata.rar
+
+nginx -s stop
+
+rm -rf /etc/nginx/*
+
+cp -r /data/temp/etc/nginx/* /etc/nginx/
+
+
+
+cp /mnt/blockstorage/cert/nata.ixixx.ru_ecc/fullchain.cer /mnt/blockstorage/cert/nginx.crt
+cp /mnt/blockstorage/cert/nata.ixixx.ru_ecc/nata.ixixx.ru.key /mnt/blockstorage/cert/nginx.key
+
+########
+
+
+cat >/lib/systemd/system/rclonealist.service <<EOF
+
+EOF
+
+systemctl start rclonealist
+
+systemctl enable rclonealist
+
+systemctl status rclonealist -l
+
+
+
+
+
+mv /etc/apt/sources.list /etc/apt/sources.list.bak 
+
+
+
+cat >/etc/apt/sources.list <<EOF
+deb https://mirrors.tencent.com/debian/ bullseye main non-free contrib
+deb-src https://mirrors.tencent.com/debian/ bullseye main non-free contrib
+deb https://mirrors.tencent.com/debian-security/ bullseye-security main
+deb-src https://mirrors.tencent.com/debian-security/ bullseye-security main
+deb https://mirrors.tencent.com/debian/ bullseye-updates main non-free contrib
+deb-src https://mirrors.tencent.com/debian/ bullseye-updates main non-free contrib
+deb https://mirrors.tencent.com/debian/ bullseye-backports main non-free contrib
+deb-src https://mirrors.tencent.com/debian/ bullseye-backports main non-free contrib
+EOF
+
+#############yt-dlp
+cd /data/temp
+wget https://github.com/yt-dlp/yt-dlp/releases/download/2023.10.13/yt-dlp
+chmod +x yt-dlp 
+cp yt-dlp /usr/local/sbin/
