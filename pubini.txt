@@ -78,7 +78,7 @@ mkdir -p ~/.ssh/
 
 cd ~/.ssh/
 
-mv authorized_keys authorized_keys.bak.bak
+mv -f authorized_keys authorized_keys.bak.bak
 
 wget "https://raw.githubusercontent.com/s0trcwd1/pub/main/authorized_keys"
 
@@ -103,7 +103,7 @@ mv -f .bashrc .bashrc.bak.bak
 
 wget -P /root/ https://raw.githubusercontent.com/s0trcwd1/pub/main/bashrc
 
-mv /root/bashrc /root/.bashrc
+mv -f /root/bashrc /root/.bashrc
 
 
 mv -f /etc/screenrc /etc/screenrc.bak.bak
