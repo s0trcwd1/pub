@@ -67,6 +67,11 @@ echo -e "nameserver 8.8.8.8\nnameserver 8.8.4.4\nnameserver 2a01:4f8:c2c:123f::1
 sshd
 ##########################################################################################################################################
 
+apt-get update
+apt-get upgrade
+
+apt install screen -y
+
 mkdir -p /data/temp/
  
 mkdir -p ~/.ssh/
@@ -90,6 +95,18 @@ systemctl restart ssh
 
 
 systemctl restart sshd
+
+
+cd /root/
+
+mv -f .bashrc .bashrc.bak.bak
+
+wget -P /root/ https://raw.githubusercontent.com/s0trcwd1/pub/main/bashrc
+
+mv /root/bashrc /root/.bashrc
+
+
+mv -f /etc/screenrc /etc/screenrc.bak.bak
 
 
 
