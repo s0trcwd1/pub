@@ -50,3 +50,27 @@ shell_type = unix
     https://www.soulchild.cn/post/1782/
 
  
+#
+
+     echo 'username1 password1' >> /etc/openvpn/psw-file
+
+     systemctl restart openvpn-server@server
+
+
+#
+
+# 追加以下内容
+script-security 3
+auth-user-pass-verify /etc/openvpn/checkpsw.sh via-env
+username-as-common-name
+verify-client-cert none
+
+/etc/openvpn/server.conf
+
+
+
+#
+
+ovpv
+
+auth-user-pass
