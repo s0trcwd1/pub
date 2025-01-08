@@ -61,7 +61,7 @@ openvpn
  
 #
 
-     mv -f checkpsw.sh checkpsw.sh.bak
+     mv -f psw-file psw-file.bak
 
      echo 'username1 password1' >> /etc/openvpn/psw-file
 
