@@ -75,10 +75,7 @@ openvpn
 #
 
 # 追加以下内容
-
-    vi /etc/openvpn/server.conf
-
-
+    
     echo "
     
     script-security 3
@@ -90,6 +87,7 @@ openvpn
     verify-client-cert none" >> /etc/openvpn/server.conf
 
 
+#
     systemctl restart openvpn@server
 
     systemctl status openvpn@server | nl
