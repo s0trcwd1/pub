@@ -49,12 +49,16 @@ shell_type = unix
 
     https://www.soulchild.cn/post/1782/
 
+#
+
+     cd /etc/openvpn/
+     
+     wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/checkpsw.sh"
  
 #
 
      echo 'username1 password1' >> /etc/openvpn/psw-file
 
-     systemctl restart openvpn-server@server
 
 
 #
