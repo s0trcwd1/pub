@@ -81,6 +81,9 @@ verify-client-cert none
 /etc/openvpn/server.conf
 
 
+    systemctl restart openvpn@server
+
+    systemctl status openvpn@server | nl
 
 #
 
