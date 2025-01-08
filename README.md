@@ -79,17 +79,15 @@ openvpn
     vi /etc/openvpn/server.conf
 
 
-echo "
+    echo "
     
-script-security 3
+    script-security 3
 
-auth-user-pass-verify /etc/openvpn/checkpsw.sh via-env
+    auth-user-pass-verify /etc/openvpn/checkpsw.sh via-env
 
-username-as-common-name
+    username-as-common-name
 
-verify-client-cert none
-
-/etc/openvpn/server.conf" >> /etc/openvpn/server.conf
+    verify-client-cert none" >> /etc/openvpn/server.conf
 
 
     systemctl restart openvpn@server
