@@ -51,6 +51,8 @@ shell_type = unix
 
 #
 
+openvpn
+
      cd /etc/openvpn/
      
      wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/checkpsw.sh"
