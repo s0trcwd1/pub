@@ -44,3 +44,9 @@ shell_type = unix
 
 
         wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
+
+#
+
+ https://www.soulchild.cn/post/1782/
+
+ 
