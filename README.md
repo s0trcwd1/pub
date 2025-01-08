@@ -77,6 +77,9 @@ openvpn
 # 追加以下内容
 
     vi /etc/openvpn/server.conf
+
+
+echo "
     
 script-security 3
 
@@ -86,7 +89,7 @@ username-as-common-name
 
 verify-client-cert none
 
-/etc/openvpn/server.conf
+/etc/openvpn/server.conf" >> /etc/openvpn/server.conf
 
 
     systemctl restart openvpn@server
