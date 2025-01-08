@@ -37,5 +37,7 @@ shell_type = unix
 
 
 
+ wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/i.sh"
 
-       wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/i.sh"
+
+wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
