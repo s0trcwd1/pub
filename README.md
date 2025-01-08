@@ -54,6 +54,8 @@ shell_type = unix
 openvpn
 
      cd /etc/openvpn/
+
+     mv -f checkpsw.sh checkpsw.sh.bak
      
      wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/checkpsw.sh"
  
@@ -69,8 +71,11 @@ openvpn
 
 # 追加以下内容
 script-security 3
+
 auth-user-pass-verify /etc/openvpn/checkpsw.sh via-env
+
 username-as-common-name
+
 verify-client-cert none
 
 /etc/openvpn/server.conf
