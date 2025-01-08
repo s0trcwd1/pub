@@ -70,6 +70,9 @@ openvpn
 #
 
 # 追加以下内容
+
+    vi /etc/openvpn/server.conf
+    
 script-security 3
 
 auth-user-pass-verify /etc/openvpn/checkpsw.sh via-env
