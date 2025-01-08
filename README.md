@@ -53,6 +53,11 @@ shell_type = unix
 
 openvpn
 
+curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
+
+chmod +x openvpn-install.sh
+
+
      cd /etc/openvpn/
 
      mv -f checkpsw.sh checkpsw.sh.bak
