@@ -69,7 +69,7 @@ openvpn
      
      wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/checkpsw.sh"
  
-#
+#    chmod 755 checkpsw.sh
 
      mv -f psw-file psw-file.bak
 
