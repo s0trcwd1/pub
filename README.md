@@ -103,3 +103,13 @@ openvpn
 ovpv
 
 auth-user-pass
+
+Alpine:
+
+     wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/openvpn-install.alpine.sh"
+    
+     apk add bash
+
+     bash openvpn-install.sh
+
+
