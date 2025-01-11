@@ -106,6 +106,15 @@ auth-user-pass
 
 Alpine:
 
+     mkdir -p /dev/net
+     
+     mknod /dev/net/tun c 10 200 
+
+     chmod 600 /dev/net/tun
+
+
+#
+
      wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/openvpn-install.alpine.sh"
     
      apk add bash
