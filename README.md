@@ -1,5 +1,4 @@
-    wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/i.sh
-    "
+    wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/i.sh"
     bash i.sh
 
 #
