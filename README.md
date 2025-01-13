@@ -1,7 +1,7 @@
 
 #
 
-    wget  "https://github.com/s0trcwd1/pub/raw/refs/heads/main/openvpn.tar.gz"
+    wget  "https://github.com/s0trcwd1/pub/raw/refs/heads/main/openvpnTHIRD.tat.gz"
 
 #
     
