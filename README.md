@@ -1,3 +1,10 @@
+
+#
+
+    wget  "https://github.com/s0trcwd1/pub/raw/refs/heads/main/openvpn.tar.gz"
+
+#
+    
     wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/i.sh"
     bash i.sh
 
