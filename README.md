@@ -56,11 +56,8 @@ shell_type = unix
 
 openvpn
 
-    curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
- #
+    
     wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/openvpn-install.sh"
-
-#
     
     chmod +x openvpn-install.sh
 
