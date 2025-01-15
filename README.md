@@ -12,6 +12,10 @@ targz
 systemctl restart ssh
 
 systemctl restart sshd
+
+hostnamectl set-hostname 
+
+
 #
 
 
