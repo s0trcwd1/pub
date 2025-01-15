@@ -4,10 +4,14 @@ targz
     wget  "https://github.com/s0trcwd1/pub/raw/refs/heads/main/openvpnTHIRD.tat.gz"
 
 #
+    apt install screen -y
     
     wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/i.sh"
     bash i.sh
 
+systemctl restart ssh
+
+systemctl restart sshd
 #
 
 
