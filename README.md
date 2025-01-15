@@ -3,6 +3,23 @@ targz
 
     wget  "https://github.com/s0trcwd1/pub/raw/refs/heads/main/openvpnTHIRD.tat.gz"
 
+
+cd /data/
+
+rm -rf /etc/openvpn/*
+
+tar -zxvf openvpnTHIRD.tat.gz
+
+ls -al  /etc/openvpn/
+
+cp -r openvpn/*  /etc/openvpn/
+
+ls -al  /etc/openvpn/     
+
+systemctl restart openvpn@server
+
+
+
 #
     apt install screen -y
     
