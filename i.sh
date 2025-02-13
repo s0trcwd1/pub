@@ -7,7 +7,7 @@ mkdir -p ~/.ssh/
 mkdir -p /data/temp/
 
 
-apt install screen -y
+apt install screen wget curl -y
 
 
 #screen
