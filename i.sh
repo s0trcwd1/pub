@@ -3,6 +3,20 @@
 mkdir -p ~/.ssh/
 
 
+cd ~/.ssh/
+
+mv authorized_keys authorized_keys.bak.bak
+
+wget "https://raw.githubusercontent.com/s0trcwd1/pub/main/authorized_keys"
+
+cd /etc/ssh/
+
+mv -f sshd_config sshd_config.bak.bak
+
+
+
+wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/sshd_config"
+
 
 mkdir -p /data/temp/
 
@@ -19,21 +33,8 @@ apt-get update -y
 apt-get upgrade -y
 
 
-cd ~/.ssh/
-
-mv authorized_keys authorized_keys.bak.bak
-
-wget "https://raw.githubusercontent.com/s0trcwd1/pub/main/authorized_keys"
-
-cd /etc/ssh/
 
 
-
-mv -f sshd_config sshd_config.bak.bak
-
-
-
-wget "https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/sshd_config"
 
 
 
