@@ -1,7 +1,7 @@
-https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/syy40bcookiesbytb.sh
+	https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/syy40bcookiesbytb.sh
 
 
-sed "s/rclone\ copy\ .\/\ \/data\/syy40/rclone\ copy\ .\/\ \/data\/${i}/ syy40bcookiesbytb.sh
+	sed "s/rclone\ copy\ .\/\ \/data\/syy40/rclone\ copy\ .\/\ \/data\/${i}/ syy40bcookiesbytb.sh
 
 
 
