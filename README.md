@@ -1,22 +1,4 @@
-root@vultr:/data# iptables -t nat -vnL POSTROUTING --line-number 
 
-Chain POSTROUTING (policy ACCEPT 0 packets, 0 bytes)
-
-num   pkts bytes target     prot opt in     out     source               destination   
-
-1      124  6432 SNAT       tcp  --  *      *       0.0.0.0/0            152.89.106.87        tcp dpt:8080 to:45.77.217.113
-
-
-
-root@vultr:/data#  iptables -t nat -vnL PREROUTING --line-number 
-
-Chain PREROUTING (policy ACCEPT 0 packets, 0 bytes)
-
-num   pkts bytes target     prot opt in     out     source               destination     
-
-1     1166 60616 DNAT       tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:443 to:152.89.106.87:8080
-
-root@vultr:/data# 
 
  
  
