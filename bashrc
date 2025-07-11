@@ -30,6 +30,7 @@ alias ssrswalld='systemctl restart firewalld'
 alias ssrstwalld='systemctl stop firewalld'
 alias sswalld='systemctl status firewalld'
 alias flist='firewall-cmd --zone=public --list-all'
+cd /data/
 alias tcpp='tcpdump -nni any'
 alias tun='tcpdump -nni tun0 ! ip6 and host !'
 alias aBaiduPCS-Go='BaiduPCS-Go ls -asc'
