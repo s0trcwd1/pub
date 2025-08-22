@@ -1,5 +1,5 @@
 
-
+	wget https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/rclone.txt
  
  
  	wget https://raw.githubusercontent.com/s0trcwd1/pub/refs/heads/main/syy40bcookiesbytb.sh
