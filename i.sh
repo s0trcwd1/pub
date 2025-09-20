@@ -22,15 +22,6 @@ mkdir -p /data/temp/
 
 
 
-
-
-apt-get update -y
-
-
-apt-get upgrade -y
-
-
-
 apt install screen wget curl iptables openssl wget ca-certificates curl
 
 
