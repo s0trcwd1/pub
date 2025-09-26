@@ -1,4 +1,4 @@
-Port 37080
+Port 22
 Include /etc/ssh/sshd_config.d/*.conf
 ClientAliveInterval 30
 ClientAliveCountMax 60
